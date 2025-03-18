@@ -21,9 +21,20 @@ Team members:
 
 ## GitHub Repository & Git Workflow (15%)
 
-For our github workflow, we created rules to ensure branch protections. Those rules include not allowing collaborators to commit changes directly to main and requiring a reviewer for each pull request.
+For our github workflow, we created rules to ensure branch protections. Those rules include not allowing collaborators to commit changes directly to main and requiring a reviewer for each pull request. The typical workflow is below:
+
+1. Create a new branch from main
+2. Make changes to the code
+3. Push the changes to the branch
+4. Create a pull request
+5. Assign a reviewer
+6. Review the changes
+7. Merge the pull request (Blocked until reviewer approves)
+8. Delete the branch (Maybe depends on the branch)
 
 ### Pull Request from @SuperSachinS
+
+Below shows an example of how our team is using github and git to collaborate in a effective manner.
 
 <img src="report-media\PullRequest-Sachin.png" width=500>
 
