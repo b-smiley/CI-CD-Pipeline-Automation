@@ -27,7 +27,6 @@ jobs:
     name: Push Docker Image on Merge
     runs-on: ubuntu-latest
     needs: build-test
-    if: github.event.pull_request.merged == true
 
     steps:
       - name: Checkout Code
