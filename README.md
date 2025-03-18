@@ -7,7 +7,7 @@ Team members:
 
 - Sachin Seizer
 - Matthew McDougall
-- Brendan SMILEY
+- Brendan Smiley
 - Luca Rios
 
 ## Project Initialization
@@ -16,7 +16,7 @@ Team members:
 
 2. Use Java JDK 11
 
-3. Ensure gretty is 3.0.6 not 3.0.4
+3. Ensure gretty is 3.1.5 not 3.0.4
 4. Follow the remainder of the instructions in the README.md
 
 ## GitHub Repository & Git Workflow (15%)
@@ -74,6 +74,12 @@ use the following command to run the container, and keep it open:
 ```bash
 docker run -it -p 8080:8080 mattmcdou/ci-cd-pipeline-automation-app:latest
 ```
+
+### Automated Image Version Tagging and Publishing
+
+GitHub Actions was used to automate the process of version tagging and publishing the Docker image to Docker Hub. The workflow can be found [here](./.github/workflows/docker-image.yml). The workflow is triggered on every push to the master (default) branch. The workflow builds the Docker image, tags it with the latest version, and then pushes it to Docker Hub. The following screenshot shows the final results of a new version on Docker Hub, with the latest tag.
+
+![Automated Image Tagging 2 Versions](./report-media/automated_image_tagging.png)
 
 ## CI/CD Pipeline Automation (40%)
 
