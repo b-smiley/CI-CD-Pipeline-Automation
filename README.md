@@ -77,9 +77,19 @@ docker run -it -p 8080:8080 mattmcdou/ci-cd-pipeline-automation-app:latest
 
 ### Automated Image Version Tagging and Publishing
 
-GitHub Actions was used to automate the process of version tagging and publishing the Docker image to Docker Hub. The workflow can be found [here](./.github/workflows/docker-image.yml). The workflow is triggered on every push to the master (default) branch. The workflow builds the Docker image, tags it with the latest version, and then pushes it to Docker Hub. The following screenshot shows the final results of a new version on Docker Hub, with the latest tag.
+GitHub Actions was used to automate the process of version tagging and publishing the Docker image to Docker Hub. The workflow can be found [here](./.github/workflows/docker-image.yml). The workflow is triggered on every push to the master (default) branch. The workflow builds the Docker image, tags it with the latest version, and then pushes it to Docker Hub. The following screenshot shows the final results of a new version on Docker Hub, **with the latest tag being the commit SHA id**.
 
-![Automated Image Tagging 2 Versions](./report-media/automated_image_tagging.png)
+Commit SHA:
+
+The commit SHA is fa61990
+
+![Commit Sha](./report-media//commit_sha.png)
+
+Automated Image Tagging Commit Versions:
+
+The SHA of fa61990 is the latest tag id for the image on Docker Hub.
+
+![Automated Image Tagging Commit Versions](./report-media/automated_image_tagging.png)
 
 ## CI/CD Pipeline Automation (40%)
 
