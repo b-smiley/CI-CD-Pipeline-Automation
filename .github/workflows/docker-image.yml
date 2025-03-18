@@ -31,8 +31,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Uses the full Git history, not the actions
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -46,7 +44,7 @@ jobs:
 
       - name: Tag & Push Versioned Image
         run: |
-          VERSION=$(git rev-parse --short HEAD)
+          VERSION=$(git rev-parse --short ${{ github.sha }})
           docker tag mattmcdou/ci-cd-pipeline-automation-app:latest mattmcdou/ci-cd-pipeline-automation-app:$VERSION
           docker push mattmcdou/ci-cd-pipeline-automation-app:$VERSION
 
